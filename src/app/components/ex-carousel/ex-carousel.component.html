@@ -1,0 +1,58 @@
+<div class="container-fluid outside">
+
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let image of data" class="col-sm-3">
+        <img alt="car" [src]="image.url" height="100%" width="100%"> {{image.id}}
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+  <div id="carouselControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+
+<!--      <div class="carousel-item active">-->
+<!--&lt;!&ndash;        <img class="d-block w-100" src="..." alt="First slide">&ndash;&gt;-->
+<!--        <img class="d-block w-100" alt="car" [src]="data[0].url" height="100%" width="100%">-->
+<!--        {{data[0].id}}-->
+<!--      </div>-->
+
+
+
+      <div class="carousel-item"
+           *ngFor="let image of data; let i = index" [ngClass]="initialActive(i)">
+        <img class="d-block w-100"
+             alt="car" [src]="image.url" height="100%" width="100%"> {{image.id}}
+      </div>
+    </div>
+
+<!--Controls-->
+    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+<!-- Indicator -->
+<!--    <ol class="carousel-indicators">-->
+<!--      <li data-target="#carouselControls" data-slide-to="0" class="active"></li>-->
+<!--      <li data-target="#carouselControls" data-slide-to="i"-->
+<!--          *ngFor="let image of data; let i = index"></li>-->
+<!--&lt;!&ndash;      <li data-target="#carouselControls" data-slide-to="2"></li>&ndash;&gt;-->
+<!--    </ol>-->
+
+  </div>
+
+  <hr/>
+</div>
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div *ngFor="let image of data" class="col-sm-3">-->
+<!--      <img alt="car" [src]="image.url" height="300px" width="450px"> {{image.id}}-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
