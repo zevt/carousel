@@ -66,6 +66,27 @@
 
 }
 
+
+
 .outside{
   margin-top: 100px;
+}
+
+//carousel-control-prev {
+//  top: 0;
+//}
+//.carousel-control-prev, .carousel-control-next {
+//  width: 4%
+//}
+
+
+span.sr-only {
+  color: black !important;
+  font-size: 20px;
+}
+span {
+  border: black 10px solid !important;
+}
+i.fa {
+  color: black!important;
 }

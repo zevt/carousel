@@ -6,28 +6,22 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./ex-carousel.component.scss']
 })
 export class ExCarouselComponent implements OnInit {
-
-  data = [
-    {url: './assets/images/cars/car1.jpg', id: 1},
-    {url: './assets/images/cars/car2.jpg', id: 2},
-    {url: './assets/images/cars/car3.jpg', id: 3},
-    {url: './assets/images/cars/car4.jpg', id: 4},
-    {url: './assets/images/cars/car5.jpg', id: 5},
-    {url: './assets/images/cars/car6.jpg', id: 6},
-    {url: './assets/images/cars/car6.jpg', id: 7},
-  ];
-
+  baseImage = './assets/images/cars/car';
+  images = [];
   constructor() {
   }
 
   ngOnInit() {
+    for (let i = 1; i < 8; ++i) {
+      this.images.push( {
+        url: this.baseImage + i + '.jpg',
+        id: i
+      });
+    }
   }
 
   initialActive(index): string {
     return index === 0 ? 'active' : '';
   }
 
-  getI(i) {
-    return i;
-  }
 }

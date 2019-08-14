@@ -1,0 +1,33 @@
+<!--<div class="container outside">-->
+<!--  <div class="flex-container">-->
+<!--    <div class="carousel-inner row w-100 mx-auto">-->
+
+<!--&lt;!&ndash;      <div *ngFor="let image of images; let i = index"  class="carousel-item col-md-4 col-sm-5 col-xs-10" [ngClass]="shouldShow(i)">&ndash;&gt;-->
+<!--      <div *ngFor="let image of images; let i = index"  class="carousel-item col-md-3 col-sm-5 col-xs-10" [ngClass]="shouldShow(i)">-->
+<!--        <img class="img-fluid mx-auto d-block" [src]="image.url" alt="slide 1">-->
+<!--        <div>Some Text here {{image.id}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <button (click)="prev()">Prev</button>-->
+<!--  <button (click)="next()">Next</button>-->
+<!--</div>-->
+
+<hr/>
+
+<div class="container outside">
+  <div class="flex-container">
+<!--    <div class="carousel-inner row w-100 mx-auto">-->
+
+      <!--      <div *ngFor="let image of images; let i = index"  class="carousel-item col-md-4 col-sm-5 col-xs-10" [ngClass]="shouldShow(i)">-->
+      <div *ngFor="let image of images; let i = index"  class="carousel-item col-md-3 col-sm-5 col-xs-10" [ngClass]="shouldShow(i)">
+        <img class="img-fluid mx-auto d-block" [src]="image.url" alt="slide 1">
+        <div>Some Text here {{image.id}}</div>
+      </div>
+<!--    </div>-->
+  </div>
+
+  <button (click)="prev()">Prev</button>
+  <button (click)="next()">Next</button>
+</div>
