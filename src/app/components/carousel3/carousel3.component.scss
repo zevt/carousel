@@ -1,11 +1,11 @@
-.flex-container > div {
-  background-color: #f8f8f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
+//.flex-container  {
+//  background-color: #f8f8f1;
+//  width: 100px;
+//  margin: 10px;
+//  text-align: center;
+//  line-height: 75px;
+//  font-size: 30px;
+//}
 
 .flex-container {
   display: flex;
@@ -14,14 +14,43 @@
 }
 
 
-.outside{
+.outside {
   margin-top: 100px;
-}
-
-div.carousel-item {
-  margin: 0 4% 0 0 !important;
 }
 
 div {
   font-size: 16px;
 }
+
+.margin-over {
+  margin-right: -8% !important;
+}
+
+.flex-container > .inactive {
+  display: none;
+}
+
+.flex-container > .active {
+  display: flex;
+  background-color: #f8f8f1;
+  margin: 25px;
+  text-align: center;
+  width: 25%;
+  line-height: 70px !important;
+  height: 230px !important;
+  //font-size: 30px;
+  //  text-align: center;
+  //  line-height: 75px;
+}
+
+
+div {
+  border: black solid 1px;
+}
+
+.img-responsive {
+  height: 180px;
+}
+//div.flex-container {
+//  line-height: 75px !important;
+//}

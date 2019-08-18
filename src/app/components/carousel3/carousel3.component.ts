@@ -16,7 +16,7 @@ export class Carousel3Component implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 9; ++i) {
+    for (let i = 1; i < 5; ++i) {
       this.images.push({
         url: this.baseImage + i + '.jpg',
         id: i
@@ -25,17 +25,23 @@ export class Carousel3Component implements OnInit {
   }
 
   shouldShow(i) {
+    if (i === this.key + this.totalDisplay - 1) {
+      return 'active margin-over';
+    }
+
     if (i >= this.key && i < this.key + this.totalDisplay) {
       return 'active';
     } else {
-      return '';
+      return 'inactive';
     }
   }
+
   prev() {
     if (this.key > 0) {
       this.key = this.key - 1;
     }
   }
+
   next() {
     if (this.key <= this.images.length - this.totalDisplay) {
       this.key = this.key + 1;
