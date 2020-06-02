@@ -11,6 +11,18 @@
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+  >.active {
+    display: flex;
+    background-color: #f8f8f1;
+    margin: 25px;
+    text-align: center;
+    width: 25%;
+    line-height: 70px !important;
+    height: 230px !important;
+  }
+  >.inactive{
+    display: none;
+  }
 }
 
 
@@ -26,22 +38,22 @@ div {
   margin-right: -8% !important;
 }
 
-.flex-container > .inactive {
-  display: none;
-}
+//.flex-container > .inactive {
+//  display: none;
+//}
 
-.flex-container > .active {
-  display: flex;
-  background-color: #f8f8f1;
-  margin: 25px;
-  text-align: center;
-  width: 25%;
-  line-height: 70px !important;
-  height: 230px !important;
-  //font-size: 30px;
-  //  text-align: center;
-  //  line-height: 75px;
-}
+//.flex-container > .active {
+//  display: flex;
+//  background-color: #f8f8f1;
+//  margin: 25px;
+//  text-align: center;
+//  width: 25%;
+//  line-height: 70px !important;
+//  height: 230px !important;
+//  //font-size: 30px;
+//  //  text-align: center;
+//  //  line-height: 75px;
+//}
 
 
 div {

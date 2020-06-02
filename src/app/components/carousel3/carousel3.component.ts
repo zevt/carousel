@@ -16,7 +16,7 @@ export class Carousel3Component implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i < 5; ++i) {
+    for (let i = 1; i < 9; ++i) {
       this.images.push({
         url: this.baseImage + i + '.jpg',
         id: i
