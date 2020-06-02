@@ -1,0 +1,70 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+  - url: /
+    secure: always
+    static_files: www/index.html
+    upload: www/index.html
+
+
+  - url: /(components/{0,1})
+    secure: always
+    static_files: components/index.html
+    upload: components/index.html
+    # static_files: components/\1
+    # upload: components/(.*) 
+
+  - url: /(components/car.+)
+    secure: always
+    static_files: components/index.html
+    upload: components/index.html
+
+
+  # - url: /components/styles.09e2c710755c8867a460.css
+  #   secure: always
+  #   static_files: components/styles.09e2c710755c8867a460.css
+  #   upload: components/styles.09e2c710755c8867a460.css
+
+  # - url: /components/runtime-es2015.5bc68c0dd8cf137fbe82.js
+  #   secure: always
+  #   static_files: components/runtime-es2015.5bc68c0dd8cf137fbe82.js
+  #   upload: components/runtime-es2015.5bc68c0dd8cf137fbe82.js
+
+  # - url: /components/styles.09e2c710755c8867a460.css
+  #   secure: always
+  #   static_files: components/styles.09e2c710755c8867a460.css
+  #   upload: components/styles.09e2c710755c8867a460.css
+
+
+  - url: /components/(.*\.(js|css))$
+    secure: always
+    static_files: components/\1
+    upload: components/.*\.(js|css)$
+
+  # - url: /(carousel)(.*)
+  #   secure: always
+  #   static_files: components/index.html
+  #   upload: components/index.html
+
+  - url: /((assets)(.*))
+    secure: always
+    static_files: components/\1
+    upload: components/(.*)
+
+  # - url: /(assets)(.*)
+  #   secure: always
+  #   static_files: www/\1
+  #   upload: www/(.*)
+
+  # - url: /(components/)(assets)(.*)
+  #   secure: always
+  #   static_files: components/\1
+  #   upload: components/(.*)
+    
+  - url: /(.*)
+    secure: always
+    static_files: www/\1
+    upload: www/(.*)
